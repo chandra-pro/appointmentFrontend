@@ -10,6 +10,7 @@ import AvailableSlots from "./AvailableSlot";
 
 const CustomDateSelector = ({ doctorID }) => {
   const [selectedDate, setSelectedDate] = useState(null);
+
   const [currentPage, setCurrentPage] = useState(1);
 
   const [selecteddate, setSelecteddate] = useState(null);

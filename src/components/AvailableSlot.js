@@ -26,6 +26,26 @@ const AvailableSlots = ({ SelectDate, doctorID }) => {
       fetchAvailableSlots();
     }
   }, [SelectDate]);
+  const isDateTimeGreaterThanCurrent = (dateString, timeString) => {
+    // Get the current date and time
+    const currentDate = new Date();
+
+    // Parse the input date
+    const [day, month, year] = dateString.split("/").map(Number);
+
+    // Parse the input time
+    const [hours, minutes] = timeString.split(":").map(Number);
+
+    // Create a Date object for the input date and time
+    const inputDateTime = new Date(year, month - 1, day, hours, minutes); // Note: Month is zero-based
+
+    // Compare the input date-time with the current date-time
+    if (inputDateTime > currentDate) {
+      return true;
+    } else {
+      return false;
+    }
+  };
   const timeSlots = [
     "9:00",
     "10:00",
@@ -52,19 +72,22 @@ const AvailableSlots = ({ SelectDate, doctorID }) => {
         {timeSlots.map((val, index) => {
           const time = val; // Adjust based on your actual time slots
           const isSlotAvailable = slots.some(slot => slot.slotTime === time);
+          const checkTime = isDateTimeGreaterThanCurrent(SelectDate, time);
 
           return (
             <div>
-              <button
-                key={index}
-                className={`slot-item ${
-                  isSlotAvailable ? "available" : "unavailable"
-                }`}
-                onClick={() => handleSlotClick(val)}
-                disabled={isSlotAvailable}
-              >
-                {val}
-              </button>
+              {checkTime && (
+                <button
+                  key={index}
+                  className={`slot-item ${
+                    isSlotAvailable ? "available" : "unavailable"
+                  }`}
+                  onClick={() => handleSlotClick(val)}
+                  disabled={isSlotAvailable}
+                >
+                  {val}
+                </button>
+              )}
             </div>
           );
         })}
