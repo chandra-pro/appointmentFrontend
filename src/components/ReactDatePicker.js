@@ -11,14 +11,10 @@ import AvailableSlots from "./AvailableSlot";
 const CustomDateSelector = ({ doctorID }) => {
   const [selectedDate, setSelectedDate] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [isClicked, setIsClicked] = useState(false);
+
   const [selecteddate, setSelecteddate] = useState(null);
   const [showComponent, setShowComponent] = useState(false);
   const options = { day: "2-digit", month: "2-digit", year: "numeric" };
-
-  // const handleClick = () => {
-  //   setIsClicked(!isClicked);
-  // };
 
   const datesPerPage = 3;
 
@@ -63,9 +59,9 @@ const CustomDateSelector = ({ doctorID }) => {
   };
 
   const getDayWithOrdinal = day => {
-    const suffixes = ["th", "st", "nd", "rd"];
-    const relevantDigits = day < 30 ? day % 20 : day % 30;
-    const suffix = relevantDigits <= 3 ? suffixes[relevantDigits] : suffixes[0];
+    // const suffixes = ["th", "st", "nd", "rd"];
+    // const relevantDigits = day < 30 ? day % 20 : day % 30;
+    // const suffix = relevantDigits <= 3 ? suffixes[relevantDigits] : suffixes[0];
     return `${day}`;
   };
 
@@ -121,7 +117,7 @@ const CustomDateSelector = ({ doctorID }) => {
             >
               <div className="date-info">{formatDayLabel(date)}</div>
               <div className="slots">
-                <span>8 slots available</span>
+                <span>slots available</span>
               </div>
             </div>
           </div>

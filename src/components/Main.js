@@ -46,21 +46,24 @@ const Main = ({ object }) => {
             <p>500</p>
           </div>
           <p className="pay">(pay at clinic)</p>
+          <h3>CLinic Name</h3>
+          <p>Dr Malti Devi CLinic Maharsatra 302017</p>
         </div>
         <div className="service-icons">
           <div className="medical-icon">
-            <FontAwesomeIcon icon={faClinicMedical} size="7x" color="blue" />
+            <FontAwesomeIcon icon={faClinicMedical} size="7x" color="green" />
           </div>
           <div className="audio-icon">
-            <FontAwesomeIcon icon={faPhoneVolume} size="7x" color="blue" />
+            <FontAwesomeIcon icon={faPhoneVolume} size="7x" color="green" />
           </div>
           <div className="video-icon">
-            <FontAwesomeIcon icon={faVideo} size="7x" color="blue" />
+            <FontAwesomeIcon icon={faVideo} size="7x" color="green" />
           </div>
         </div>
       </div>
-      <div className="horizontal-line"></div>
+
       <CustomDateSelector doctorID={object._id} />
+      <div className="horizontal-line"></div>
     </div>
   );
 };
