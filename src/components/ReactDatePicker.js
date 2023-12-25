@@ -59,9 +59,6 @@ const CustomDateSelector = ({ doctorID }) => {
   };
 
   const getDayWithOrdinal = day => {
-    // const suffixes = ["th", "st", "nd", "rd"];
-    // const relevantDigits = day < 30 ? day % 20 : day % 30;
-    // const suffix = relevantDigits <= 3 ? suffixes[relevantDigits] : suffixes[0];
     return `${day}`;
   };
 
