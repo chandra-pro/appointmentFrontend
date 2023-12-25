@@ -1,0 +1,63 @@
+.custom-date-selector {
+    text-align: center;
+    
+  }
+  
+  .date-grid {
+    display: flex;
+    /* grid-template-columns: repeat(7, 1fr); */
+    gap: 100px;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  .date-cell {
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+   
+    /* transition: background-color 0.3s; */
+  }
+  
+  .date-cell:hover {
+    background-color: #f5f0f0;
+  }
+  
+  .selected {
+    border-bottom: 2px solid transparent;
+    border-bottom-color: blue;
+    
+  }
+  
+  .date-number {
+    font-size: 1.2em;
+  }
+  
+  .day {
+    font-size: 0.8em;
+    margin-top: 5px;
+  }
+  .date-info{
+    
+    /* width: 20px; */
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: medium;
+    font-variant: small-caps;
+    font-weight: 500;
+    display: inline-block;
+    cursor: pointer;
+    border-bottom: 2px solid transparent;
+    transition: border-bottom-color 0.3s ease;
+    
+  }
+ 
+  
+  .clicked {
+    border-bottom-color: lightgreen; /* Change this color to your desired color */
+  }
+  .grid-cell-parent{
+    display: flex;
+  }
+  .slots{
+    color: green;
+    margin-top: 50%;
+  }

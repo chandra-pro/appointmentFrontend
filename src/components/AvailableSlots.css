@@ -1,0 +1,44 @@
+/* AvailableSlots.css */
+.slots-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    align-items: center;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  
+  .slot-item {
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    
+  }
+  
+  .available {
+    background-color: #aaffaa; /* Light green for available slots */
+  }
+  
+  .unavailable {
+    background-color: #ffaaaa; /* Light red for unavailable slots */
+  }
+  button {
+    padding: 10px;
+    margin: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for available slots */
+  button:enabled {
+    background-color: #4caf50; /* Green */
+    color: white;
+  }
+  
+  /* Styling for unavailable slots */
+  button:disabled {
+    background-color: #dddddd; /* Grey */
+    color: #888888;
+    cursor: not-allowed;
+  }
